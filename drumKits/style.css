@@ -23,11 +23,6 @@ body {
     justify-content: center;
 }
 
-.main {
-    /* max-width: fit-content; */
-    border: 1px solid black;
-}
-
 .main_header {
     display: flex;
     gap: 2rem;
@@ -59,7 +54,7 @@ body {
 }
 
 .main_btn {
-    padding: 5rem 7rem;
+    padding: 3rem 5rem;
     background-color: white;
     font-size: 2rem;
     border-radius: 1rem;
@@ -79,4 +74,10 @@ body {
 
 .main_btn:active {
     background-size: 105%;
+}
+
+@media screen and (min-width: 500px) {
+    .main_btn {
+        padding: 5rem 7rem;
+    }
 }
