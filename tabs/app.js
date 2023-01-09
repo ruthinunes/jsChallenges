@@ -9,13 +9,11 @@ cardsCtn.addEventListener('click', function (e) {
             btn.classList.remove('active');
             e.target.classList.add('active');
         });
-    };
-    cardsContent.forEach(function (card) {
-        const cardID = card.id;
-        if (cardID === id) {
-            card.classList.add('active');
-        } else {
+        cardsContent.forEach(function (card) {
             card.classList.remove('active');
-        };
-    });
+        });
+
+        const element = document.getElementById(id);
+        element.classList.add('active');
+    };
 });
