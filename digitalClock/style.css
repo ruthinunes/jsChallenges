@@ -14,10 +14,10 @@ html {
     font-size: 62.5%;
 }
 
+/***** Morning clock ******/
 body {
-    background-image: url('bg-imageMobile.jpeg');
-    background-position-y: center;
-    background-position-x: center;
+    background-image: url('images/setUpMobile.jpeg');
+    background-size: cover;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -26,7 +26,6 @@ body {
     justify-content: center;
 }
 
-/***** Morning clock ******/
 .container {
     color: #383435;
     font-weight: 400;
@@ -64,7 +63,7 @@ body {
 
 /***** Night clock *****/
 body.night {
-    background-image: url('moonMobile.jpg');
+    background-image: url('images/moonMobile.jpg');
     background-position-x: center;
 }
 
@@ -91,9 +90,15 @@ body.night {
 
 @media screen and (min-width:748px) {
 
+    /***** Morning clock *****/
+    body {
+        background-image: url('images/setUpDesktop.jpeg');
+        background-position-y: center;
+    }
+
     /***** Night clock *****/
     body.night {
-        background-image: url('moonTablet.jpg');
+        background-image: url('images/moonTablet.jpg');
     }
 
     .time_ctn {
@@ -113,7 +118,7 @@ body.night {
 
     /***** Night clock *****/
     body.night {
-        background-image: url('moonDesktop.jpg');
+        background-image: url('images/moonDesktop.jpg');
         background-position: center;
         background-position-y: bottom;
     }
