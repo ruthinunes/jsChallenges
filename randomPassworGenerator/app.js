@@ -22,17 +22,19 @@ function copyPassword(input) {
         // for mobiles
         input.setSelectionRange(0, 9999);
         navigator.clipboard.writeText(input.value);
-        showAlert(input.value)
+        showAlert(input.value, copyBtn)
     });
 };
 
-function showAlert(input) {
+function showAlert(input, copyBtn) {
     const alertContainer = document.querySelector('#alertContainer');
     alertContainer.textContent = `${input} copied`;
     alertContainer.classList.add('active');
+    copyBtn.style.color = '#D77B7D';
 
     setTimeout(function () {
         alertContainer.classList.remove('active');
+        copyBtn.style.color = '#252525';
     }, 1500);
 };
 
