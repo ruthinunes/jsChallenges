@@ -46,7 +46,6 @@ body {
     overflow: hidden;
     color: rgb(238, 238, 238);
     text-shadow: rgba(0, 0, 0, 0.8) 0px 5px 10px;
-    /* border: 1px solid black; */
     font-size: 2rem;
 }
 
@@ -96,6 +95,18 @@ body.night {
     body.night {
         background-image: url('moonTablet.jpg');
     }
+
+    .time_ctn {
+        padding-top: 1.5rem;
+    }
+
+    .time_ctn>p {
+        font-size: 3rem;
+    }
+
+    .time_ctn>span {
+        padding: 1rem 1.5rem;
+    }
 }
 
 @media screen and (min-width:1024px) {
@@ -106,25 +117,10 @@ body.night {
         background-position: center;
         background-position-y: bottom;
     }
-}
 
-@media screen and (min-width:1220px) {
-
-    .time_ctn>p {
-        font-size: 3rem;
-    }
-
-    .time_ctn>span {
-        padding: 1rem 2rem;
-        font-size: 2rem;
-    }
-}
-
-@media screen and (min-width:1440px) {
     .time_ctn {
         padding-top: 2rem;
         width: 200px;
-
     }
 
     .time_ctn>p {
@@ -133,7 +129,7 @@ body.night {
     }
 
     .time_ctn>span {
-        padding: 1.2rem 2rem;
+        padding: 1.5rem 2rem;
         font-size: 2rem;
     }
 }
