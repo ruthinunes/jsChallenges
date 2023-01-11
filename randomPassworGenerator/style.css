@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+
+*,
+::after,
+::before {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #D77B7D;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    /* border: 1px solid red; */
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+.title {
+    color: rgb(37, 37, 37);
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+.input_ctn {
+    /* border: 1px solid yellowgreen; */
+    position: relative;
+}
+
+input {
+    padding: 1.5rem 1rem;
+    width: 100%;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    /* background-color: rgb(227, 222, 222); */
+    background-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+    border: 1.3px solid black;
+}
+
+.input_ctn>i {
+    color: #252525;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 26px;
+    right: 18px;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    background-color: rgb(37, 37, 37);
+    color: rgb(227, 222, 222);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #D77B7D;
+    transition: all .3s ease;
+}
+
+.alert_ctn {
+    display: none;
+    transition: 0.4s;
+}
+
+.alert_ctn.active {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    background-color: #a1ef9c;
+    font-weight: 800;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: fixed;
+    bottom: 149px;
+    right: 87px;
+}
+
+@media screen and (min-width: 500px) {
+    .container {
+        padding: 4rem;
+    }
+
+    .title {
+        font-size: 2.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    input {
+        font-size: 1.6rem;
+        padding: 2rem 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .input_ctn>i {
+        font-size: 2.5rem;
+        bottom: 36px;
+        right: 18px;
+    }
+
+    .btn {
+        padding: 1.5rem 2.5rem;
+        font-size: 1.6rem;
+    }
+
+    .alert_ctn.active {
+        bottom: 67px;
+        right: 108px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 6rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    input {
+        font-size: 2rem;
+        padding: 2.5rem 2rem;
+        margin: 3rem 0;
+    }
+
+    .input_ctn>i {
+        font-size: 3rem;
+        bottom: 53px;
+        right: 25px;
+    }
+
+    .btn {
+        padding: 2rem 2.5rem;
+        font-size: 1.8rem;
+    }
+
+    .alert_ctn.active {
+        right: 214px;
+    }
+}
