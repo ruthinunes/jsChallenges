@@ -1,0 +1,39 @@
+*,
+::after,
+::before {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #D77B7D;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+}
+
+.container>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+}
