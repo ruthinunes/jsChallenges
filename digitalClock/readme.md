@@ -1,0 +1,1 @@
+color pallete: #DAD0BF, #986E94, #383435, #DFD8D1, #B28EA6

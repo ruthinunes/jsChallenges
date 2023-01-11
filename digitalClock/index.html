@@ -9,13 +9,22 @@
     <title>Digital Clock</title>
 </head>
 
-<body>
+<body class="night">
 
-    <div class="container">
-        <div class="hour"></div>
-        <div class="mins"></div>
-        <div class="secs"></div>
-    </div>
+    <section class="container night">
+        <div class="time_ctn night">
+            <p class="time" id="hour"></p>
+            <span>Hour</span>
+        </div>
+        <div class="time_ctn night">
+            <p class="time" id="mins"></p>
+            <span>Minutes</span>
+        </div>
+        <div class="time_ctn night">
+            <p class="time" id="secs"></p>
+            <span>Seconds</span>
+        </div>
+    </section>
 
     <script src="app.js"></script>
 </body>

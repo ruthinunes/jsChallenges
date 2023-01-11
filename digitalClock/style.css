@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+
 *,
 ::after,
 ::before {
@@ -13,27 +15,125 @@ html {
 }
 
 body {
-    background-color: #D77B7D;
-    height: 100vh;
+    background-image: url('bg-imageMobile.jpeg');
+    background-position-y: center;
+    background-position-x: center;
     width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+/***** Morning clock ******/
 .container {
+    color: #383435;
+    font-weight: 400;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 3rem;
+    column-gap: 2rem;
 }
 
-.container>div {
+.time_ctn {
+    background-color: rgba(127, 89, 126, 0.471);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    color: rgb(238, 238, 238);
+    text-shadow: rgba(0, 0, 0, 0.8) 0px 5px 10px;
+    /* border: 1px solid black; */
     font-size: 2rem;
+}
+
+.time_ctn>p {
+    padding: 1rem 0;
+}
+
+.time_ctn>span {
+    background-color: rgb(88, 154, 204);
+    width: 100%;
+    text-align: center;
+    padding: .5rem 1rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/***** Night clock *****/
+body.night {
+    background-image: url('moonMobile.jpg');
+    background-position-x: center;
+}
+
+.time_ctn.night {
+    background-color: rgba(255, 205, 137, 0.3);
+    box-shadow: rgba(255, 205, 137, .5) 0 0 5px;
+}
+
+.time_ctn.night>span {
+    background-color: rgba(1, 1, 39, 0.6);
+}
+
+@media screen and (min-width:437px) {
+
+    .time_ctn>p {
+        font-size: 2.5rem;
+    }
+
+    .time_ctn>span {
+        padding: 1rem 1.5rem;
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width:748px) {
+
+    /***** Night clock *****/
+    body.night {
+        background-image: url('moonTablet.jpg');
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    /***** Night clock *****/
+    body.night {
+        background-image: url('moonDesktop.jpg');
+        background-position: center;
+        background-position-y: bottom;
+    }
+}
+
+@media screen and (min-width:1220px) {
+
+    .time_ctn>p {
+        font-size: 3rem;
+    }
+
+    .time_ctn>span {
+        padding: 1rem 2rem;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .time_ctn {
+        padding-top: 2rem;
+        width: 200px;
+
+    }
+
+    .time_ctn>p {
+        padding-bottom: 2rem;
+        font-size: 3.5rem;
+    }
+
+    .time_ctn>span {
+        padding: 1.2rem 2rem;
+        font-size: 2rem;
+    }
 }
