@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+
+*,
+::after,
+::before {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 0px;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    align-items: center;
+    background-color: #4C4C4C;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.container {
+    overflow-y: scroll;
+}
+
+.main_ctn.active {
+    align-items: center;
+    color: rgb(201, 199, 199);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    padding: 4rem 3rem;
+}
+
+.main_ctn {
+    display: none;
+}
+
+.main_img {
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.main_title {
+    color: #FFA500;
+    font-size: 2rem;
+    letter-spacing: 1.3px;
+    margin-bottom: 2.5rem;
+}
+
+.main_text {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    margin-bottom: 4rem;
+    max-width: 600px;
+}
+
+.main_btn {
+    background-color: #FFA500;
+    border-radius: 10px;
+    color: #3D2800;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+
+.main_btn:hover {
+    background-color: #8B8B8B;
+    color: #EBEBEB;
+    transform: scale(1.2);
+}
+
+.trailer_ctn.active {
+    background-color: black;
+    display: block;
+    padding: 3rem 0;
+    position: relative;
+}
+
+.trailer_ctn>video {
+    width: 100%;
+}
+
+.trailer_ctn>i {
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    right: 17px;
+    top: 13px;
+}
+
+.trailer_ctn {
+    display: none;
+}
+
+@media screen and (min-width:540px) {
+
+    .main_title {
+        font-size: 2.5rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 3rem;
+    }
+
+    .main_text {
+        font-size: 1.7rem;
+        line-height: 1.7;
+        margin-bottom: 5rem;
+    }
+
+    .main_btn {
+        font-size: 1.7rem;
+        padding: 1.7rem 2.2rem;
+    }
+
+    .trailer_ctn>i {
+        font-size: 2.5rem;
+        right: 24px;
+        top: 16px;
+    }
+}
+
+@media screen and (min-width:698px) {
+    .main_ctn.active {
+        padding: 6rem 4rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .main_img {
+        margin-bottom: 4rem;
+    }
+
+    .main_title {
+        font-size: 3.5rem;
+        letter-spacing: 1.8px;
+        margin-bottom: 4rem;
+    }
+
+    .main_text {
+        font-size: 2.2rem;
+        line-height: 1.9;
+        margin-bottom: 7rem;
+        max-width: 700px;
+    }
+
+    .main_btn {
+        font-size: 2.2rem;
+        padding: 2rem 3rem;
+    }
+
+    .trailer_ctn>i {
+        font-size: 3.5rem;
+        right: 35px;
+        top: 27px;
+    }
+}
