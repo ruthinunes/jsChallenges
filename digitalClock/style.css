@@ -65,17 +65,17 @@ body {
 }
 
 /***** Evening style ******/
-body.evening {
+body.afternoon {
     background-image: url('images/afternoonDesktop.jpeg');
 }
 
-.time_ctn.evening {
+.time_ctn.afternoon {
     text-shadow: rgba(163, 193, 225, 0.8) 0px 5px 10px;
     background-color: rgba(133, 169, 208, .6);
     color: #14283D;
 }
 
-.time_ctn.evening>span {
+.time_ctn.afternoon>span {
     background-color: rgba(67, 130, 33, 0.2);
     box-shadow: rgba(179, 204, 230, 1) 0 0 5px;
 }
