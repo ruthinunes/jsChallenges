@@ -14,56 +14,75 @@ html {
     font-size: 62.5%;
 }
 
-/***** Morning clock ******/
+/***** Morning style ******/
 body {
-    background-image: url('images/setUpMobile.jpeg');
+    align-items: center;
+    background-image: url('images/setUpDesktop.jpeg');
+    background-position-y: center;
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    height: 100vh;
     justify-content: center;
+    width: 100vw;
 }
 
 .container {
     color: #383435;
-    font-weight: 400;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
+    display: grid;
+    font-weight: 400;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .time_ctn {
+    align-items: center;
     background-color: rgba(127, 89, 126, 0.471);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: rgb(238, 238, 238);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     overflow: hidden;
-    color: rgb(238, 238, 238);
+    padding-top: 1rem;
     text-shadow: rgba(0, 0, 0, 0.8) 0px 5px 10px;
-    font-size: 2rem;
+    width: 100px;
 }
 
 .time_ctn>p {
-    padding: 1rem 0;
+    font-size: 2.5rem;
+    padding: .5rem 0 1.5rem 0;
 }
 
 .time_ctn>span {
-    background-color: rgb(88, 154, 204);
-    width: 100%;
-    text-align: center;
-    padding: .5rem 1rem;
+    background-color: rgba(88, 154, 204, 0.3);
     font-size: 1.4rem;
     font-weight: 300;
+    padding: .5rem 1rem;
+    text-align: center;
+    width: 100%;
 }
 
-/***** Night clock *****/
+/***** Evening style ******/
+body.evening {
+    background-image: url('images/afternoonDesktop.jpeg');
+}
+
+.time_ctn.evening {
+    text-shadow: rgba(163, 193, 225, 0.8) 0px 5px 10px;
+    background-color: rgba(133, 169, 208, .6);
+    color: #14283D;
+}
+
+.time_ctn.evening>span {
+    background-color: rgba(67, 130, 33, 0.2);
+    box-shadow: rgba(179, 204, 230, 1) 0 0 5px;
+}
+
+/***** Night style *****/
 body.night {
-    background-image: url('images/moonMobile.jpg');
+    background-image: url('images/moonDesktop.jpg');
     background-position-x: center;
 }
 
@@ -76,52 +95,25 @@ body.night {
     background-color: rgba(1, 1, 39, 0.6);
 }
 
-@media screen and (min-width:437px) {
-
-    .time_ctn>p {
-        font-size: 2.5rem;
-    }
-
-    .time_ctn>span {
-        padding: 1rem 1.5rem;
-        font-size: 1.8rem;
-    }
-}
-
-@media screen and (min-width:748px) {
-
-    /***** Morning clock *****/
-    body {
-        background-image: url('images/setUpDesktop.jpeg');
-        background-position-y: center;
-    }
-
-    /***** Night clock *****/
-    body.night {
-        background-image: url('images/moonTablet.jpg');
-    }
+@media screen and (min-width:534px) {
 
     .time_ctn {
         padding-top: 1.5rem;
+        width: 150px;
     }
 
     .time_ctn>p {
         font-size: 3rem;
+        padding: 1rem 0 2rem 0;
     }
 
     .time_ctn>span {
+        font-size: 1.7rem;
         padding: 1rem 1.5rem;
     }
 }
 
-@media screen and (min-width:1024px) {
-
-    /***** Night clock *****/
-    body.night {
-        background-image: url('images/moonDesktop.jpg');
-        background-position: center;
-        background-position-y: bottom;
-    }
+@media screen and (min-width:748px) {
 
     .time_ctn {
         padding-top: 2rem;
@@ -129,12 +121,12 @@ body.night {
     }
 
     .time_ctn>p {
-        padding-bottom: 2rem;
         font-size: 3.5rem;
+        padding: 1.5rem 0 2.5rem 0;
     }
 
     .time_ctn>span {
-        padding: 1.5rem 2rem;
         font-size: 2rem;
+        padding: 1.5rem 2rem;
     }
 }
