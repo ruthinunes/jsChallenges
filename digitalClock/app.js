@@ -3,15 +3,9 @@ function getHours() {
     let mins = new Date().getMinutes();
     let secs = new Date().getSeconds();
 
-    if (hours < 10) {
-        hours = '0' + hours
-    }
-    if (mins < 10) {
-        mins = '0' + mins
-    }
-    if (secs < 10) {
-        secs = '0' + secs
-    }
+    hours = hours < 10 ? "0" + hours : hours;
+    mins = mins < 10 ? "0" + mins : mins;
+    secs = secs < 10 ? "0" + secs : secs;
 
     document.querySelector('#hour').textContent = hours;
     document.querySelector('#mins').textContent = mins;
