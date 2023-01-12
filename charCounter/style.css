@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+
+*,
+::after,
+::before {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #D77B7D;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    color: #FAEFF0;
+    padding: 1rem;
+}
+
+.counter_text>h2 {
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.8) 2px 5px 10px;
+    font-size: 2.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.counter_input>textarea {
+    color: #6D2228;
+    background-color: #FAEFF0;
+    resize: none;
+    overflow: hidden;
+    width: 100%;
+    height: 13rem;
+    border-radius: 7px;
+    outline: none;
+    padding: 1.5rem;
+    border: 1px solid #EFC6C6;
+}
+
+::placeholder {
+    color: #6D2228;
+}
+
+.counter_footer {
+    padding: 0 .5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.total_counter,
+.remainig_counter {
+    color: #A2E4E1;
+}
+
+@media screen and (min-width:455px) {
+    section {
+        width: 400px;
+    }
+
+    .counter_text>h2 {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .counter_input>textarea {
+        height: 15rem;
+        width: 100%;
+        padding: 2rem;
+    }
+
+    ::placeholder {
+        font-size: 1.6rem;
+    }
+
+    .counter_footer {
+        margin-top: 2rem;
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width:748px) {
+    section {
+        width: 600px;
+    }
+
+    .counter_text>h2 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .counter_input>textarea {
+        height: 20rem;
+        width: 100%;
+        padding: 3rem;
+    }
+
+    ::placeholder {
+        font-size: 1.8rem;
+    }
+
+    .counter_footer {
+        margin-top: 3rem;
+        font-size: 2rem;
+    }
+}
