@@ -1,5 +1,7 @@
 const textArea = document.querySelector('#textArea');
 
+window.addEventListener('DOMContentLoaded', upadateCounter);
+
 function upadateCounter() {
     let maxChar = textArea.maxLength;
     let totalCounter = document.querySelector('.total_counter');
