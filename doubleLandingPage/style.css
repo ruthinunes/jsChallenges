@@ -26,21 +26,22 @@ body {
 
 .split_ctn {
     align-items: center;
-    background-color: #242424;
+    background-color: #ffffff;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 }
 
-.top-left_ctn {
+.top-right_ctn {
     background-image: url('images/apple.png');
     height: 50%;
 }
 
-.bottom-right_ctn {
-    background-image: url('images/samsung.png');
+.bottom-left_ctn {
+    background-image: url('images/samsung.jpg');
     height: 50%;
 }
 
@@ -56,19 +57,10 @@ h3 {
 
 .wrapper {
     background-color: rgba(0, 0, 0, 0.5);
-    left: 0;
     position: fixed;
     width: 100%;
     z-index: 1;
-    height: 50%;
-}
-
-.wrapper.top-left {
-    top: 0;
-}
-
-.wrapper.bottom-right {
-    bottom: 0;
+    height: inherit;
 }
 
 .split_btn {
@@ -91,25 +83,42 @@ h3 {
     transition: all .7s;
 }
 
-/* container and wrapper active */
-.active_top-left .top-left_ctn,
-.active_top-left .wrapper.top-left {
-    height: 80%;
+/*** container and wrapper active ****/
+.active_top-right .top-right_ctn {
+    height: 75%;
 }
 
-.active_top-left .bottom-right_ctn,
-.active_top-left .wrapper.bottom-right {
-    height: 20%;
+.active_top-right .bottom-left_ctn,
+.active_top-right .bottom-left_wpp {
+    height: 25%;
 }
 
-.active_bottom-right .bottom-right_ctn,
-.active_bottom-right .wrapper.bottom-right {
-    height: 80%;
+.active_bottom-left .bottom-left_ctn {
+    height: 75%;
 }
 
-.active_bottom-right .top-left_ctn,
-.active_bottom-right .wrapper.top-left {
-    height: 20%;
+.active_bottom-left .top-right_ctn,
+.active_bottom-left .top-right_wpp {
+    height: 25%;
+}
+
+.active_top-right .top-right_wpp {
+    z-index: -1;
+    transition: z-index 2.5s ease-in-out;
+}
+
+.active_bottom-left .bottom-left_wpp {
+    z-index: -1;
+    transition: z-index 2.5s ease;
+
+}
+
+/*** Transition ***/
+.top-right_ctn,
+.bottom-left_ctn,
+.top-right_wpp,
+.bottom-left_wpp {
+    transition: all 2s ease-in-out;
 }
 
 @media screen and (min-width:600px) {
@@ -118,26 +127,18 @@ h3 {
         flex-direction: row-reverse;
     }
 
-    .split_ctn {
-        width: 100%;
-    }
-
-    h3 {
-        overflow: hidden;
-    }
-
-    .wrapper {
+    .top-right_ctn {
         height: 100%;
-        left: auto;
         width: 50%;
     }
 
-    .top-left_ctn {
+    .bottom-left_ctn {
         height: 100%;
+        width: 50%;
     }
 
-    .bottom-right_ctn {
-        height: 100%;
+    h3 {
+        padding: 0 1rem;
     }
 
     .split_btn {
@@ -146,28 +147,30 @@ h3 {
         padding: 2rem 3.5rem;
     }
 
+    .wrapper {
+        height: 100%;
+        width: inherit;
+    }
 
-    /* container and wrapper active */
-    .active_top-left .top-left_ctn,
-    .active_top-left .wrapper.top-left {
+    /*** container and wrapper active ***/
+    .active_top-right .top-right_ctn {
         height: 100%;
         width: 75%;
     }
 
-    .active_top-left .bottom-right_ctn,
-    .active_top-left .wrapper.bottom-right {
+    .active_top-right .bottom-left_ctn,
+    .active_top-right .bottom-left_wpp {
         height: 100%;
         width: 25%;
     }
 
-    .active_bottom-right .bottom-right_ctn,
-    .active_bottom-right .wrapper.bottom-right {
+    .active_bottom-left .bottom-left_ctn {
         height: 100%;
         width: 75%;
     }
 
-    .active_bottom-right .top-left_ctn,
-    .active_bottom-right .wrapper.top-left {
+    .active_bottom-left .top-right_ctn,
+    .active_bottom-left .top-right_wpp {
         height: 100%;
         width: 25%;
     }
