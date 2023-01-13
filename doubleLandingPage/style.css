@@ -26,22 +26,21 @@ body {
 
 .split_ctn {
     align-items: center;
+    background-color: #242424;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 .top-left_ctn {
-    background-image: url('https://imgs.ponto.com.br/55054419/1g.jpg');
+    background-image: url('images/apple.png');
     height: 50%;
-
 }
 
 .bottom-right_ctn {
-    background-image: url('https://fujiokadistribuidor.vteximg.com.br/arquivos/ids/244129');
+    background-image: url('images/samsung.png');
     height: 50%;
 }
 
@@ -73,7 +72,7 @@ h3 {
 }
 
 .split_btn {
-    background-color: black;
+    background-color: #242424;
     border-radius: 5px;
     box-shadow: rgb(255, 255, 255) 0px 2px 2px;
     color: white;
@@ -87,7 +86,7 @@ h3 {
 
 .split_btn:hover {
     background-color: white;
-    color: black;
+    color: #242424;
     transform: scale(1.3);
     transition: all .7s;
 }
