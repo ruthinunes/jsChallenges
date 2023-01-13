@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;500;900&display=swap');
+
+*,
+::after,
+::before {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.split_ctn {
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.top-left_ctn {
+    background-image: url('https://imgs.ponto.com.br/55054419/1g.jpg');
+    height: 50%;
+
+}
+
+.bottom-right_ctn {
+    background-image: url('https://fujiokadistribuidor.vteximg.com.br/arquivos/ids/244129');
+    height: 50%;
+}
+
+h3 {
+    backdrop-filter: brightness(.8);
+    color: #F5F5F5;
+    font-size: 4.8rem;
+    overflow: hidden;
+    text-align: center;
+    text-shadow: rgb(2, 2, 2) 0px 2px 2px;
+    width: 100%;
+    z-index: 99;
+}
+
+.wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.wrapper.top-left {
+    height: 50%;
+    top: 0;
+}
+
+.wrapper.bottom-right {
+    bottom: 0;
+    height: 50%;
+}
+
+.split_btn {
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: rgb(255, 255, 255) 0px 2px 2px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    padding: 1.5rem 3rem;
+    transform: scale(1);
+    z-index: 99;
+}
+
+.split_btn:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.3);
+    transition: all .7s;
+}
+
+/* container and wrapper active */
+.active_top-left .top-left_ctn,
+.active_top-left .wrapper.top-left {
+    height: 80%;
+}
+
+.active_top-left .bottom-right_ctn,
+.active_top-left .wrapper.bottom-right {
+    height: 20%;
+}
+
+.active_bottom-right .bottom-right_ctn,
+.active_bottom-right .wrapper.bottom-right {
+    height: 80%;
+}
+
+.active_bottom-right .top-left_ctn,
+.active_bottom-right .wrapper.top-left {
+    height: 20%;
+}
+
+@media screen and (min-width:600px) {
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .split_ctn {
+        width: 100%;
+    }
+
+    .wrapper {
+        height: 100%;
+        left: auto;
+        width: 50%;
+    }
+
+    .top-left_ctn {
+        height: 100%;
+    }
+
+    .bottom-right_ctn {
+        height: 100%;
+    }
+
+    /* container and wrapper active */
+    .active_top-left .top-left_ctn,
+    .active_top-left .wrapper.top-left {
+        height: 100%;
+        width: 75%;
+    }
+
+    .active_top-left .bottom-right_ctn,
+    .active_top-left .wrapper.bottom-right {
+        height: 100%;
+        width: 25%;
+    }
+
+    .active_bottom-right .bottom-right_ctn,
+    .active_bottom-right .wrapper.bottom-right {
+        height: 100%;
+        width: 75%;
+    }
+
+    .active_bottom-right .top-left_ctn,
+    .active_bottom-right .wrapper.top-left {
+        height: 100%;
+        width: 25%;
+    }
+}
