@@ -26,7 +26,6 @@ body {
 
 .split_ctn {
     align-items: center;
-    background-color: rgb(255, 255, 255);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -36,12 +35,12 @@ body {
 }
 
 .top-right_ctn {
-    background-image: url('images/apple2.png');
+    background-image: url('images/apple.png');
     height: 50%;
 }
 
 .bottom-left_ctn {
-    background-image: url('images/samsung2.png');
+    background-image: url('images/samsung.png');
     height: 50%;
 }
 
