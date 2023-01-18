@@ -1,6 +1,7 @@
 const emailInput = document.querySelector('#inputEmail');
 const passwordInput = document.querySelector('#inputPassword');
 const form = document.querySelector('.form');
+const alertInput = document.querySelector('.input_alert');
 
 emailInput.addEventListener('keydown', function () {
     emailInput.style.fontFamily = 'Crimson Text';
@@ -9,17 +10,22 @@ emailInput.addEventListener('keydown', function () {
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (emailInput.value == '' || passwordInput.value == '') {
-        alert('Please enter values');
+        alertInput.classList.add('active');
+        alertInput.textContent = 'Please, enter all values'
+        return;
     } else {
         if (isValidEmail(emailInput.value)) {
+            alertInput.classList.remove('active');
             alert('Login Accept');
+            window.open('signUp.html');
         } else {
-            alert('Please, insert a valid email');
+            alertInput.classList.add('active');
+            alertInput.textContent = 'Please, insert a valid email'
         }
     }
 });
 
 function isValidEmail(email) {
-    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return emailRegex.test(email);
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(email);
 };
