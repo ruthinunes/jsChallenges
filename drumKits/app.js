@@ -3,6 +3,8 @@ const btnsContainer = document.querySelector('.main_content');
 
 window.addEventListener('DOMContentLoaded', function () {
     createBtn();
+    keyPressed();
+
 });
 
 function createBtn() {
@@ -61,10 +63,39 @@ function btnEventListener(btn) {
 // **** audio section *****
 function setAudio(kitsBtn, btn) {
     let audio = `<audio src="sounds/${kitsBtn}.mp3"></audio>`
-    btn.insertAdjacentHTML("afterbegin", audio);
+    btn.insertAdjacentHTML("afterend", audio);
 };
 
 function playAudio(btn) {
-    let audio = btn.querySelector('audio');
+    let audio = btn.nextSibling;
     audio.play();
 };
+
+function keyPressed() {
+    document.addEventListener('keydown', function (e) {
+        let keyPressed = e.key;
+
+        switch (keyPressed) {
+            case 'c':
+                playKeyPressed('crash');
+                break;
+
+            case 'k':
+                playKeyPressed('kick');
+                break;
+
+            case 's':
+                playKeyPressed('snare');
+                break;
+            case 't':
+                playKeyPressed('tom');
+                break;
+        };
+
+    });
+};
+
+function playKeyPressed(kit) {
+    let audio = new Audio(`sounds/${kit}.mp3`);
+    audio.play();
+}
