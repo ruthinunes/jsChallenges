@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b2bd08b712.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Todo List App</title>
 </head>
@@ -11,7 +12,8 @@
 <body>
     <div class="container">
         <div class="task_input">
-            <ion-icon name="task_outline"></ion-icon>
+            <i class="fa-regular fa-pen-to-square"></i>
+            <!-- <ion-icon name="task_outline"></ion-icon> -->
             <input type="text" placeholder="Add a New Task + Enter">
         </div>
         <div class="task_controls">
@@ -20,10 +22,12 @@
                 <span id="pending">Pending</span>
                 <span id="completed">Completed</span>
             </div>
-            <button class="btn">Clear All</button>
+            <button class="btn" id="clearBtn">Clear All</button>
         </div>
         <ul class="task_box"></ul>
     </div>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
