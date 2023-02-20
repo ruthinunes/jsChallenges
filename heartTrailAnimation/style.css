@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+
+/* *,
+::after,
+::before {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    background-color: #D77B7D;
+    height: 100vh;
+    overflow: hidden;
+}
+
+span {
+    background: url(heart-solid.svg);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 6s linear;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }
+
+    100% {
+        transform: translate(-50%, -5000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
