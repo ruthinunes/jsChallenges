@@ -10,3 +10,13 @@ document.addEventListener('click', function (e) {
         inputElement.value = "";
     };
 });
+
+document.addEventListener('keydown', function (e) {
+    if (e.code == 'Enter') {
+        const inputValue = inputElement.value;
+        const googleSearch = "https://www.google.com/search?q=";
+
+        window.location.href = googleSearch + inputValue;
+        inputElement.value = "";
+    };
+});
