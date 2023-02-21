@@ -42,6 +42,7 @@ body {
     width: 300px;
     border-radius: 5px;
     background-color: rgba(211, 211, 211, 0.5);
+
 }
 
 li span {
@@ -56,7 +57,14 @@ li span:hover {
     background-color: darkgrey;
     border-radius: 10px;
     padding-left: 2rem;
-    transition: padding .5s linear;
+    transition: padding .3s linear;
+    color: rgb(236, 236, 236);
+}
+
+.social-menu .icon {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
 }
 
 li span i {
@@ -65,7 +73,10 @@ li span i {
 
 .rotate .fa-angle-down {
     transform: rotate(180deg);
-    transition: transform .5s;
+}
+
+.fa-angle-down {
+    transition: transform .2s;
 }
 
 .social-list.hide {
