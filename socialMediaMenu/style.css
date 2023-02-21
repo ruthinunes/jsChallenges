@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
+
+*,
+::after,
+::before {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    font-weight: 500;
+    color: rgba(45, 45, 45, 0.8);
+    font-size: 2rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(150deg, purple 20%, orange 80%);
+}
+
+.social-menu {
+    background-color: rgba(211, 211, 211, 0.8);
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+}
+
+.social-list {
+    list-style: none;
+    width: 300px;
+    border-radius: 5px;
+    background-color: rgba(211, 211, 211, 0.5);
+}
+
+li span {
+    display: flex;
+    padding: 1.5rem 0;
+    margin: 1rem 1.8rem;
+    gap: 3rem;
+    cursor: pointer;
+}
+
+li span:hover {
+    background-color: darkgrey;
+    border-radius: 10px;
+    padding-left: 2rem;
+    transition: padding .5s linear;
+}
+
+li span i {
+    font-size: 3rem;
+}
+
+.rotate .fa-angle-down {
+    transform: rotate(180deg);
+    transition: transform .5s;
+}
+
+.social-list.hide {
+    visibility: hidden;
+}
