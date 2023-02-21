@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
+
+*,
+::after,
+::before {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    /* background-color: #c5e4e4; */
+    background-color: rgba(235, 235, 235, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2),
+        -6px -6px 10px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.score {
+    font-weight: 500;
+    align-self: flex-end;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.score span {
+    color: grey;
+}
+
+.question {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+input {
+    background-color: rgba(235, 235, 235, 0.7);
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+    align-self: center;
+    width: 25rem;
+    outline: none;
+    margin-bottom: 4rem;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.form-btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.btn {
+    background-color: rgba(235, 235, 235, 0.7);
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+    font-family: 'Montserrat';
+    font-size: 1.6rem;
+    width: 50%;
+    padding: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#answerBtn:hover {
+    text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+    background-color: #7db8b7;
+    color: white;
+    transition: all .5s ease;
+}
+
+#resetBtn:hover {
+    background-color: #f1b38a;
+    color: white;
+    transition: all .5s ease;
+}
