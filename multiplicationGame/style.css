@@ -15,7 +15,6 @@ html {
 }
 
 body {
-    /* background-color: #c5e4e4; */
     background-color: rgba(235, 235, 235, 1);
     display: flex;
     justify-content: center;
@@ -61,6 +60,16 @@ input {
     border-radius: 10px;
     font-size: 2rem;
     text-align: center;
+}
+
+.blink {
+    caret-color: transparent;
+    /* torna o cursor invisível */
+}
+
+.blink::after {
+    content: '|';
+    /* adiciona um cursor personalizado */
 }
 
 .form-btns {
