@@ -2,6 +2,7 @@ const questionElement = document.querySelector('.question');
 const inputElement = document.querySelector('#answer');
 const formElement = document.querySelector('.form');
 const scoreElement = document.querySelector('.score');
+const resetBtn = document.querySelector('#resetBtn');
 const operationArray = ['+', '-', '*'];
 const operation = operationArray[getRandomOperation()];
 
@@ -82,4 +83,9 @@ formElement.addEventListener('submit', function () {
             console.log('Operação inválida');
     };
     checkResult(result)
+});
+
+resetBtn.addEventListener('click', function () {
+    localStorage.removeItem('score');
+    location.reload();
 });
