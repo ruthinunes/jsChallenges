@@ -34,6 +34,7 @@ function getQuestion() {
         default:
             console.log('Operação inválida');
     };
+    scoreElement.innerHTML = `SCORE: ${score}`;
     questionElement.innerHTML = `Quanto é ${n1} ${operator} ${n2} ?`
 };
 
@@ -58,8 +59,15 @@ function updateScore() {
     localStorage.setItem("score", JSON.stringify(score));
 };
 
+function blinkCursor() {
+    inputElement.focus();
+    setInterval(function () {
+        inputElement.classList.toggle('blink');
+    }, 500);
+};
+
 window.addEventListener('DOMContentLoaded', function () {
-    scoreElement.innerHTML = `SCORE: ${score}`;
+    blinkCursor();
     getQuestion();
 });
 
