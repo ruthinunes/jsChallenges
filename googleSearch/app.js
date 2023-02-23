@@ -8,6 +8,7 @@ function inputFunctions() {
     // add close button when input is not empty
     inputElement.addEventListener('keydown', function () {
         closeInputCtn.classList.remove('hide');
+        inputElement.style.width = "65%";
         showPopup('#closeInputBtn', '.popup-clear');
     });
     // remove close button when input is empty
