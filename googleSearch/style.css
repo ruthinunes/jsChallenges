@@ -63,6 +63,18 @@ body {
     margin-bottom: 3rem;
 }
 
+.main-ctn p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 3.5rem;
+    color: rgb(187, 191, 196);
+}
+
+.main-ctn p a {
+    color: #8ab4f8;
+}
+
+/* INPUT */
 .input-search-ctn {
     padding: 2.5rem 0;
     border: 1.3px solid #5f6368;
@@ -90,6 +102,27 @@ body {
     font-size: 1.7rem;
 }
 
+.input-clear {
+    border-right: 1px solid #898f96;
+    position: absolute;
+    right: 120px;
+    height: 65%;
+    bottom: 10px;
+    padding-right: 2.5rem;
+}
+
+.hide.input-clear {
+    display: none;
+}
+
+.input-clear img {
+    right: 13px;
+    top: 2px;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+}
+
 .input-img-camera {
     width: 30px;
     height: 29px;
@@ -113,20 +146,9 @@ input {
     outline: none;
     position: absolute;
     height: 100%;
-    width: 75%;
+    width: 65%;
     left: 59px;
     bottom: 2px;
-}
-
-.main-ctn p {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 3.5rem;
-    color: #bbbfc4;
-}
-
-.main-ctn p a {
-    color: #8ab4f8;
 }
 
 /* BUTTONS */
