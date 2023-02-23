@@ -1,7 +1,7 @@
 const inputCtn = document.querySelector('.input-search-ctn');
+const inputElement = document.querySelector('#serchInput');
 
 function inputFunctions() {
-    const inputElement = document.querySelector('#serchInput');
     const closeInputCtn = document.querySelector('.input-clear');
     const closeInputBtn = document.querySelector('#closeInputBtn');
 
@@ -25,11 +25,7 @@ function inputFunctions() {
     // search function
     document.addEventListener('keydown', function (e) {
         if (e.code == 'Enter') {
-            const inputValue = inputElement.value;
-            const googleSearch = "https://www.google.com/search?q=";
-
-            window.location.href = googleSearch + inputValue;
-            inputElement.value = "";
+            searchContent();
         };
     });
 };
@@ -43,8 +39,23 @@ function showPopup(element, className) {
     });
 };
 
+function searchLuckBtns() {
+    document.querySelector('#searchBtn').addEventListener('click', function () {
+        searchContent();
+    });
+};
+
+function searchContent() {
+    const inputValue = inputElement.value;
+    const googleSearch = "https://www.google.com/search?q=";
+
+    window.location.href = googleSearch + inputValue;
+    inputElement.value = "";
+};
+
 window.addEventListener('DOMContentLoaded', function () {
     inputFunctions();
     showPopup('.input-img-mic', '.popup-mic');
     showPopup('.input-img-camera', '.popup-camera');
+    searchLuckBtns();
 });
