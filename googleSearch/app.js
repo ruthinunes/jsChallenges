@@ -1,22 +1,35 @@
 const inputCtn = document.querySelector('.input-search-ctn');
 
-function clearInput() {
+function inputFunctions() {
     const inputElement = document.querySelector('#serchInput');
     const closeInputCtn = document.querySelector('.input-clear');
     const closeInputBtn = document.querySelector('#closeInputBtn');
 
+    // add close button when input is not empty
     inputElement.addEventListener('keydown', function () {
         closeInputCtn.classList.remove('hide');
         showPopup('#closeInputBtn', '.popup-clear');
     });
+    // remove close button when input is empty
     inputElement.addEventListener('keyup', () => {
         if (inputElement.value === '') {
             closeInputCtn.classList.add('hide');
         };
     });
+    // clear input on click
     closeInputBtn.addEventListener('click', function () {
         inputElement.value = "";
         closeInputCtn.classList.add('hide');
+    });
+    // search function
+    document.addEventListener('keydown', function (e) {
+        if (e.code == 'Enter') {
+            const inputValue = inputElement.value;
+            const googleSearch = "https://www.google.com/search?q=";
+
+            window.location.href = googleSearch + inputValue;
+            inputElement.value = "";
+        };
     });
 };
 
@@ -30,7 +43,7 @@ function showPopup(element, className) {
 };
 
 window.addEventListener('DOMContentLoaded', function () {
-    clearInput();
+    inputFunctions();
     showPopup('.input-img-mic', '.popup-mic');
     showPopup('.input-img-camera', '.popup-camera');
 });
