@@ -111,11 +111,8 @@ body {
     padding-right: 2.5rem;
 }
 
-.hide.input-clear {
-    display: none;
-}
-
 .input-clear img {
+    cursor: pointer;
     right: 13px;
     top: 2px;
     position: absolute;
@@ -124,6 +121,7 @@ body {
 }
 
 .input-img-camera {
+    cursor: pointer;
     width: 30px;
     height: 29px;
     position: absolute;
@@ -132,6 +130,7 @@ body {
 }
 
 .input-img-mic {
+    cursor: pointer;
     position: absolute;
     width: 39px;
     height: 38px;
@@ -149,6 +148,45 @@ input {
     width: 65%;
     left: 59px;
     bottom: 2px;
+}
+
+/* hide elements */
+.hide.input-clear,
+.hide.popup {
+    display: none;
+}
+
+/* popup small boxes */
+.popup {
+    bottom: -35px;
+    border: 1px solid rgba(187, 191, 196, .5);
+    padding: .7rem 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    color: rgb(187, 191, 196);
+}
+
+.popup:before {
+    content: "";
+    position: absolute;
+    right: 28%;
+    top: -21px;
+}
+
+.popup-clear {
+    right: 123px;
+}
+
+.popup-mic {
+    right: 10px;
+    bottom: -35px;
+}
+
+.popup-camera {
+    right: 0;
+    bottom: -35px;
 }
 
 /* BUTTONS */
