@@ -73,5 +73,5 @@ window.addEventListener('DOMContentLoaded', function () {
     inputFunctions();
     showPopup('.input-img-mic', '.popup-mic');
     showPopup('.input-img-camera', '.popup-camera');
-    searchLuckBtns();
+    dosearchLuckBtns();
 });
