@@ -39,9 +39,15 @@ function showPopup(element, className) {
     });
 };
 
-function searchLuckBtns() {
+async function dosearchLuckBtns() {
     document.querySelector('#searchBtn').addEventListener('click', function () {
         searchContent();
+    });
+
+    document.querySelector('#luckBtn').addEventListener('click', async function () {
+        let data = await doLuckSearch();
+        window.location.href = data;
+
     });
 };
 
@@ -51,6 +57,16 @@ function searchContent() {
 
     window.location.href = googleSearch + inputValue;
     inputElement.value = "";
+};
+
+async function doLuckSearch() {
+    let query = inputElement.value;
+    const url = `https://www.googleapis.com/customsearch/v1?key=AIzaSyDidkPrwkGWFpCVvHcXIW-AUPeJYALX2w8&cx=c1085d8e56b614b01&q=${query}&num=1`;
+
+    let response = await fetch(url);
+    let data = await response.json();
+    let result = data.items[0].link;
+    return result;
 };
 
 window.addEventListener('DOMContentLoaded', function () {
