@@ -1,12 +1,12 @@
-Google Homepage Clone
+### Google Homepage Clone
 
 This is a desktop clone of the Google homepage created as a project to test my web development skills.
 
-Technologies used
-    HTML
-    CSS
-    JavaScript
-    Google Custom Search API
+## Technologies used
+- HTML
+- CSS
+- JavaScript
+- Google Custom Search API
 
-Description
+## Description
 This project is a replica of the Google homepage. It contains a search bar that can be used to search the web using the Google Custom Search API.
