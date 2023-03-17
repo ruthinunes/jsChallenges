@@ -1,7 +1,7 @@
 const boardElement = document.querySelector('.board');
 const text = document.querySelector('p');
 const resetBtn = document.querySelector('button');
-const cells = ["", "", "", "", "", "", "", "", "",];
+const cells = ["", "", "", "", "", "", "", "", ""];
 let count = 0;
 
 function createCells() {
@@ -48,9 +48,13 @@ function checkWinner() {
 
             text.innerHTML = `GANHOU "${cells[a].innerText}"`;
             cells.forEach(function (cell) {
+                cell.style.pointerEvents = 'none';
                 cell.replaceWith(cell.cloneNode(true));
             });
         } else if (isDraw) {
+            cells.forEach(function (cell) {
+                cell.style.pointerEvents = 'none';
+            });
             text.innerHTML = "EMPATOU";
         };;
     };
@@ -60,6 +64,7 @@ resetBtn.addEventListener('click', function () {
     const cells = document.querySelectorAll('.cell');
     cells.forEach(function (cell) {
         cell.innerHTML = "";
+        cell.style.pointerEvents = 'auto';
         cell.addEventListener('click', addPlayer);
     });
     count = 0;
