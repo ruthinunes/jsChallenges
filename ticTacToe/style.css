@@ -1,0 +1,49 @@
+*,
+::after,
+::before {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* text-decoration: none; */
+    /* list-style: none; */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+}
+
+.p_test {
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.quadrado-principal {
+    font-size: 40px;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    /* color: #eee; */
+    background-color: rgba(0, 0, 0, .2);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.quadrado-principal>div {
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.celula {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
