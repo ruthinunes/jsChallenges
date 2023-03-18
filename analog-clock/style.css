@@ -24,6 +24,7 @@ body {
     background-color: #F9D956;
     border-radius: 50%;
     position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .hours,
