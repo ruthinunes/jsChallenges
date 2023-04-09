@@ -10,13 +10,21 @@
     outline: none;
 }
 
+:root {
+    --color-primary: #2a9d8f;
+    --color-secondary: #e76f51;
+    --color-background: #f4f1de;
+    --color-text: #264653;
+}
+
 html {
     font-size: 62.5%;
 }
 
 body {
     font-family: 'Nunito', sans-serif;
-    background-color: #9383557d;
+    background-color: var(--color-background);
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,24 +37,24 @@ body {
     text-align: center;
     margin: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    /* border: 1px solid red; */
     border-radius: 10px;
 }
 
 .ctn-content {
-    /* border: 1px solid white; */
     margin: 1.8rem;
 }
 
 h1 {
+    color: var(--color-primary);
     font-weight: 800;
     margin-bottom: 2rem;
     font-size: 2.5rem;
 }
 
 .description {
+    width: 80%;
     font-size: 2rem;
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem auto;
 }
 
 form {
@@ -57,21 +65,42 @@ form {
 }
 
 input {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    border: 2px solid var(--color-primary);
     border-radius: 5px;
     margin: 0.5rem 0;
     text-align: center;
     padding: 1rem 0;
-    width: 30%;
+    width: 100px;
 }
 
 button {
-    padding: 1rem 2rem;
-    margin: 1rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: 1.5rem 2.5rem;
+    margin: 1.5rem 0;
     font-size: 1.6rem;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+button:hover{
+    background-color: #2a9d904e;
+    color: var(--color-primary);
+    outline: var(--color-primary);
 }
 
 .result {
+    margin: 0 auto;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-background);
     display: none;
     font-size: 1.8rem;
 }
