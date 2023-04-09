@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;800&display=swap');
+
+*,
+::after,
+::before {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #9383557d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    text-align: center;
+    margin: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* border: 1px solid red; */
+    border-radius: 10px;
+}
+
+.ctn-content {
+    /* border: 1px solid white; */
+    margin: 1.8rem;
+}
+
+h1 {
+    font-weight: 800;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.description {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+}
+
+input {
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    text-align: center;
+    padding: 1rem 0;
+    width: 30%;
+}
+
+button {
+    padding: 1rem 2rem;
+    margin: 1rem;
+    font-size: 1.6rem;
+    border-radius: 5px;
+}
+
+.result {
+    display: none;
+    font-size: 1.8rem;
+}
+
+span {
+    font-weight: 800;
+}
+
+.active {
+    display: block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
