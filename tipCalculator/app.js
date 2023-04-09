@@ -23,7 +23,7 @@ function calculate(billValue, tipValue) {
     const totalTip = (billValue * tipValue) / 100
     const totalBill = billValue + totalTip;
     const resultContent = `<p class="tip-result">Total em gorgeta: <span>R$ ${totalTip.toFixed(2)}</span></p>
-    <p class="bill-result">Total da conta: <span>R$ ${totalBill.toFixed(2)}</span></p>`;
+    <p class="bill-result">Total a pagar: <span>R$ ${totalBill.toFixed(2)}</span></p>`;
 
     resultElement.classList.add('active');
     resultElement.innerHTML = resultContent;
