@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculador de Gorgetas</title>
+</head>
+<body>
+    
+    <main class="container">
+        <div class="ctn-content">
+            <h1>Calculador de Gorgetas</h1>
+            <p class="description">Digite o total da conta e a porcentagem de gorgeja para calcular o total</p>
+            <form action="">
+                <label for="bill-amount">Total da conta</label>
+                <input type="number" name="bill-amount" id="billAmount" step="0.01">
+                <label for="tip-percent">Porcentagem da gorgeta</label>
+                <input type="text" name="tip-porcent" id="tipPorcent">
+                <button type="submit" class="calculate" id="calculateBtn">Calculate</button>
+            </form>
+            <div class="result"></div>
+           
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
